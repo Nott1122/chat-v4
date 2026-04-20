@@ -9,7 +9,7 @@ import { Low } from 'lowdb';
 import { JSONFile } from 'lowdb/node';
 
 const __filename = fileURLToPath(import.meta.url);
-const __dirname = path.dirname(__filename);
+   app.use(express.static(path.join(__dirname, '.')));
 
 const app = express();
 const httpServer = createServer(app);
