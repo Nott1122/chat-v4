@@ -1,0 +1,36 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width,initial-scale=1"/>
+<title>Chat v4</title>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+<div id="auth">
+  <div class="card">
+    <div class="tabs"><button id="tab-login" class="active">Entrar</button><button id="tab-reg">Criar conta</button></div>
+    <div id="login-form">
+      <input id="l-email" placeholder="Email" type="email"/>
+      <input id="l-pass" placeholder="Senha" type="password"/>
+      <button id="l-btn">Entrar</button>
+    </div>
+    <div id="reg-form" class="hidden">
+      <input id="r-name" placeholder="Seu nome"/>
+      <input id="r-email" placeholder="Email" type="email"/>
+      <input id="r-pass" placeholder="Senha" type="password"/>
+      <label class="photo"><span>📷 Foto</span><input id="r-photo" type="file" accept="image/*"/></label>
+      <button id="r-btn">Criar</button>
+    </div>
+  </div>
+</div>
+<div id="app" class="hidden">
+  <header><span>Chat v4</span><button id="logout">Sair</button></header>
+  <aside id="online"></aside>
+  <main id="msgs"></main>
+  <footer><input id="msg" placeholder="Mensagem..."/><button id="send">Enviar</button></footer>
+</div>
+<script src="/socket.io/socket.io.js"></script>
+<script src="app.js"></script>
+</body>
+</html>
